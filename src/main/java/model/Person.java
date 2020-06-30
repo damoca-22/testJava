@@ -4,12 +4,14 @@ public class Person {
 
     private String firstName;
     private String lastName;
+    private String fullName;
     private int age;
     private UsableStringsEnum accountStatus;
 
     public Person(String firstName, String lastName, int age, UsableStringsEnum accountStatus) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.fullName = firstName + " " + lastName;
         this.age = age;
         this.accountStatus = accountStatus;
     }
@@ -44,5 +46,9 @@ public class Person {
 
     public void setAccountStatus(UsableStringsEnum accountStatus) {
         this.accountStatus = accountStatus;
+    }
+
+    public String getFullName() {
+        return fullName;
     }
 }
